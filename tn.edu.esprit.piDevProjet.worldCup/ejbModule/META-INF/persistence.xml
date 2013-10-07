@@ -8,6 +8,7 @@
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Team</class>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Player</class>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Gift</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.MicroEvent</class>
 		<properties>
 
 			<property name="hibernate.hbm2ddl.auto" value="create" />
