@@ -12,6 +12,10 @@
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.CollectionAgent</class>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Product</class>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Administrator</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.News</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.SubscribedClient</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Ticket</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Video</class>
 		<properties>
 
 			<property name="hibernate.hbm2ddl.auto" value="create" />
