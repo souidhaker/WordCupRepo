@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 
-public class Interview implements Serializable {
+public class Interview extends Actuality implements Serializable {
 	private String interviewdPlayer;
 	
 

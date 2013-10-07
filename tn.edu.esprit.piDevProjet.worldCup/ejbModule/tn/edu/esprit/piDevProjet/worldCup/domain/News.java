@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  * 
  */
 @Entity
-public class News implements Serializable {
+public class News extends Actuality implements Serializable {
 
 	private String newsDescription;
 	private static final long serialVersionUID = 1L;
