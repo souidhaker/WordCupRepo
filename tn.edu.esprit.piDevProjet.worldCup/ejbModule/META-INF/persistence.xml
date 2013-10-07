@@ -18,6 +18,7 @@
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Video</class>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Gallery</class>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Interview</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Actuality</class>
 		<properties>
 
 			<property name="hibernate.hbm2ddl.auto" value="create" />
