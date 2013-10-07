@@ -5,6 +5,9 @@
 	<persistence-unit name="tn.edu.esprit.piDevProjet.worldCup">
 		<jta-data-source>java:/worldCupDS</jta-data-source>
 		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Ads</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Team</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Player</class>
+		<class>tn.edu.esprit.piDevProjet.worldCup.domain.Gift</class>
 		<properties>
 
 			<property name="hibernate.hbm2ddl.auto" value="create" />

@@ -51,5 +51,12 @@ public class Ads implements Serializable {
 	public void setCompany(String company) {
 		this.company = company;
 	}
+	public Ads(int idAds, String name, String url, String company) {
+		super();
+		this.idAds = idAds;
+		this.name = name;
+		this.url = url;
+		this.company = company;
+	}
    
 }
