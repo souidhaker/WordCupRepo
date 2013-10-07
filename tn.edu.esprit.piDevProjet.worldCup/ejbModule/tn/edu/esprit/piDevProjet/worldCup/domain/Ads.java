@@ -23,6 +23,7 @@ public class Ads implements Serializable {
 		super();
 	}  
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getIdAds() {
 		return this.idAds;
 	}

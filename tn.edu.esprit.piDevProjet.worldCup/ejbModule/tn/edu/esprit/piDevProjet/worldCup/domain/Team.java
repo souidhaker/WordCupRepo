@@ -25,6 +25,7 @@ public class Team implements Serializable {
 		super();
 	}   
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getIdTeam() {
 		return this.idTeam;
 	}

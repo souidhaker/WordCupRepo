@@ -25,6 +25,7 @@ public class Player implements Serializable {
 		super();
 	}   
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getPlayerId() {
 		return this.playerId;
 	}

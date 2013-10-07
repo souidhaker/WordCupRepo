@@ -20,6 +20,7 @@ public class Gift implements Serializable {
 		super();
 	}  
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public String getGiftKind() {
 		return this.giftKind;
 	}
