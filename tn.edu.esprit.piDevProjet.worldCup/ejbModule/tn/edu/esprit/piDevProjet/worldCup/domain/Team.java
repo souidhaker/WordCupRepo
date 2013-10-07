@@ -2,6 +2,8 @@ package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -20,7 +22,7 @@ public class Team implements Serializable {
 	private int teamVectories;
 	private char teamGroupp;
 	private static final long serialVersionUID = 1L;
-
+private List<SubscribedClient> subscribedClient;
 	public Team() {
 		super();
 	}   
@@ -78,5 +80,12 @@ public class Team implements Serializable {
 		this.teamVectories = teamVectories;
 		this.teamGroupp = teamGroupp;
 	}
-   
+	
+   @ManyToMany
+   public List<SubscribedClient> getSubscribedClient() {
+		return subscribedClient;
+	}
+	public void setSubscribedClient(List<SubscribedClient> subscribedClient) {
+		this.subscribedClient = subscribedClient;
+	} 
 }

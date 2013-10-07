@@ -18,7 +18,7 @@ public class Ads implements Serializable {
 	private String url;
 	private String company;
 	private static final long serialVersionUID = 1L;
-
+private Administrator administrator;
 	public Ads() {
 		super();
 	}  
@@ -59,5 +59,12 @@ public class Ads implements Serializable {
 		this.url = url;
 		this.company = company;
 	}
-   
+	
+   @ManyToOne
+   public Administrator getAdministrator() {
+		return administrator;
+	}
+	public void setAdministrator(Administrator administrator) {
+		this.administrator = administrator;
+	}
 }

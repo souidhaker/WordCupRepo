@@ -2,6 +2,8 @@ package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -17,7 +19,8 @@ public class Administrator implements Serializable {
 	private String login;
 	private String password;
 	private static final long serialVersionUID = 1L;
-
+private List<Ads> ads;
+private List<Product> product;
 	public Administrator() {
 		super();
 	} 
@@ -44,7 +47,25 @@ public class Administrator implements Serializable {
 		this.login = login;
 		this.password = password;
 	}
+
 	
 	
-   
+	@OneToMany
+	public List<Ads> getAds() {
+		return ads;
+	}
+
+	public void setAds(List<Ads> ads) {
+		this.ads = ads;
+	}
+
+	
+   @OneToMany
+   public List<Product> getProduct() {
+		return product;
+	}
+
+	public void setProduct(List<Product> product) {
+		this.product = product;
+	}
 }

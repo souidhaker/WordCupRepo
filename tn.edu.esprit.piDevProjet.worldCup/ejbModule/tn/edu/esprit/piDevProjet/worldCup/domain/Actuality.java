@@ -2,6 +2,7 @@ package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -18,7 +19,7 @@ private int actualityId;
 private String actualityTitle;
 private Date actualityDate;
 
-
+private List<SubscribedClient> subscribedClient ;
 	
 	public Actuality(int actualityId, String actualityTitle, Date actualityDate) {
 	super();
@@ -59,5 +60,12 @@ private Date actualityDate;
 	public Actuality() {
 		super();
 	}
-   
+	
+   @ManyToMany
+   public List<SubscribedClient> getSubscribedClient() {
+		return subscribedClient;
+	}
+	public void setSubscribedClient(List<SubscribedClient> subscribedClient) {
+		this.subscribedClient = subscribedClient;
+	}
 }

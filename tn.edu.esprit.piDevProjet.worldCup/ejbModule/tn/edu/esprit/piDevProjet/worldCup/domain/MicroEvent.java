@@ -15,7 +15,7 @@ public class MicroEvent implements Serializable {
 	private String nameEvent;
 	private int timeEvent;
 	private String typeEvent;
-	
+	private SubscribedClient  subscribedClient;
 	private static final long serialVersionUID = 1L;
 
 	public MicroEvent() {
@@ -68,6 +68,15 @@ public class MicroEvent implements Serializable {
 		this.timeEvent = timeEvent;
 		this.typeEvent = typeEvent;
 	}
-   
+
+	
+   @ManyToOne
+   public SubscribedClient getSubscribedClient() {
+		return subscribedClient;
+	}
+
+	public void setSubscribedClient(SubscribedClient subscribedClient) {
+		this.subscribedClient = subscribedClient;
+	}
 	
 }

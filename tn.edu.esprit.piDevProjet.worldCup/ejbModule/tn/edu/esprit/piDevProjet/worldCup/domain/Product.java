@@ -2,6 +2,8 @@ package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -18,7 +20,8 @@ public class Product implements Serializable {
 	private String productLabel;
 	private String productCategory;
 	private static final long serialVersionUID = 1L;
-
+private List<SubscribedClient > subscribedClient;
+private Administrator administrator ;
 	public Product() {
 		super();
 	}   
@@ -52,8 +55,22 @@ public class Product implements Serializable {
 		this.productCategory = productCategory;
 	}
 	
+	@ManyToMany 
+	public List<SubscribedClient> getSubscribedClient() {
+		return subscribedClient;
+	}
+	public void setSubscribedClient(List<SubscribedClient> subscribedClient) {
+		this.subscribedClient = subscribedClient;
+	}
 	
 	
+	@ManyToOne
+	public Administrator getAdministrator() {
+		return administrator;
+	}
+	public void setAdministrator(Administrator administrator) {
+		this.administrator = administrator;
+	}
 	
    
 }

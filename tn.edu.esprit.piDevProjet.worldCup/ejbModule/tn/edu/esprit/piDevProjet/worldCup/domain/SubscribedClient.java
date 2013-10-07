@@ -1,11 +1,14 @@
 package tn.edu.esprit.piDevProjet.worldCup.domain;
 
+import java.awt.List;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 /**
  * Entity implementation class for Entity: SubscribedClient
@@ -23,7 +26,12 @@ public class SubscribedClient implements Serializable {
 	private String clientLogin;
 	private String clientPassword;
 	private static final long serialVersionUID = 1L;
-
+private java.util.List<Gallery> gallery ;
+private java.util.List<Actuality> actuality;
+private java.util.List<Match> match;
+private java.util.List<Product> product;
+private java.util.List<Team> team;
+private java.util.List<MicroEvent> microEvent;
 	public SubscribedClient() {
 		super();
 	}
@@ -106,5 +114,65 @@ public class SubscribedClient implements Serializable {
 		this.clientLogin = clientLogin;
 		this.clientPassword = clientPassword;
 	}
+
+	
+@ManyToMany
+public java.util.List<Gallery> getGallery() {
+	return gallery;
+}
+
+public void setGallery(java.util.List<Gallery> gallery) {
+	this.gallery = gallery;
+}
+
+
+@ManyToMany
+public java.util.List<Actuality> getActuality() {
+	return actuality;
+}
+
+public void setActuality(java.util.List<Actuality> actuality) {
+	this.actuality = actuality;
+}
+
+
+@ManyToMany
+public java.util.List<Match> getMatch() {
+	return match;
+}
+
+public void setMatch(java.util.List<Match> match) {
+	this.match = match;
+}
+
+
+@ManyToMany
+public java.util.List<Product> getProduct() {
+	return product;
+}
+
+public void setProduct(java.util.List<Product> product) {
+	this.product = product;
+}
+
+
+@ManyToMany
+public java.util.List<Team> getTeam() {
+	return team;
+}
+
+public void setTeam(java.util.List<Team> team) {
+	this.team = team;
+}
+
+
+@OneToMany
+public java.util.List<MicroEvent> getMicroEvent() {
+	return microEvent;
+}
+
+public void setMicroEvent(java.util.List<MicroEvent> microEvent) {
+	this.microEvent = microEvent;
+}
 
 }

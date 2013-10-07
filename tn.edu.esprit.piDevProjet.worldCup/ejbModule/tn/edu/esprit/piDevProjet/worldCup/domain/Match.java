@@ -3,6 +3,8 @@ package tn.edu.esprit.piDevProjet.worldCup.domain;
 import java.io.Serializable;
 import java.lang.String;
 import java.sql.Date;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -21,7 +23,7 @@ public class Match implements Serializable {
 	private String matchCategory;
 	private String matchStadium;
 	private static final long serialVersionUID = 1L;
-
+private List<SubscribedClient> subscribedClient ;
 	public Match() {
 		super();
 	}   
@@ -72,5 +74,12 @@ public class Match implements Serializable {
 		this.matchStadium = matchStadium;
 	}
 	
+	@ManyToMany
+	public List<SubscribedClient> getSubscribedClient() {
+		return subscribedClient;
+	}
+	public void setSubscribedClient(List<SubscribedClient> subscribedClient) {
+		this.subscribedClient = subscribedClient;
+	}
    
 }

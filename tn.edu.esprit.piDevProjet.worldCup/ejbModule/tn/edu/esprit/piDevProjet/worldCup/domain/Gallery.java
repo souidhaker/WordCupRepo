@@ -1,6 +1,8 @@
 package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -13,8 +15,7 @@ public class Gallery implements Serializable {
 	private int galleryId;
 	private String galleryName;
 	private String galleryDescription;
-	
-
+	private List<SubscribedClient> subscribedclient;
 	
 	public Gallery(int galleryId, String galleryName, String galleryDescription) {
 		super();
@@ -54,5 +55,12 @@ public class Gallery implements Serializable {
 	public Gallery() {
 		super();
 	}
-   
+	
+   @ManyToMany
+   public List<SubscribedClient> getSubscribedclient() {
+		return subscribedclient;
+	}
+	public void setSubscribedclient(List<SubscribedClient> subscribedclient) {
+		this.subscribedclient = subscribedclient;
+	}
 }
