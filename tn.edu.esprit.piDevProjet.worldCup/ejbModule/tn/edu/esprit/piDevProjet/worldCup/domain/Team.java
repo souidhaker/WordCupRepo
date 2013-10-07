@@ -23,6 +23,8 @@ public class Team implements Serializable {
 	private char teamGroupp;
 	private static final long serialVersionUID = 1L;
 private List<SubscribedClient> subscribedClient;
+private List<MicroEvent> microEvents;
+private List<Player> players;
 	public Team() {
 		super();
 	}   
@@ -87,5 +89,21 @@ private List<SubscribedClient> subscribedClient;
 	}
 	public void setSubscribedClient(List<SubscribedClient> subscribedClient) {
 		this.subscribedClient = subscribedClient;
+	}
+	
+	@OneToMany
+	public List<MicroEvent> getMicroEvents() {
+		return microEvents;
+	}
+	public void setMicroEvents(List<MicroEvent> microEvents) {
+		this.microEvents = microEvents;
+	}
+	
+	@OneToMany
+	public List<Player> getPlayers() {
+		return players;
+	}
+	public void setPlayers(List<Player> players) {
+		this.players = players;
 	} 
 }

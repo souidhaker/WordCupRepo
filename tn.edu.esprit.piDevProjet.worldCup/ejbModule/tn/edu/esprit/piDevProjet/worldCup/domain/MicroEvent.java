@@ -17,7 +17,9 @@ public class MicroEvent implements Serializable {
 	private String typeEvent;
 	private SubscribedClient  subscribedClient;
 	private static final long serialVersionUID = 1L;
-
+	private MicroEvent microEvent;
+	private Player player;
+	private Team team;
 	public MicroEvent() {
 		super();
 	}
@@ -78,5 +80,34 @@ public class MicroEvent implements Serializable {
 	public void setSubscribedClient(SubscribedClient subscribedClient) {
 		this.subscribedClient = subscribedClient;
 	}
+
 	
+	@ManyToOne
+	public MicroEvent getMicroEvent() {
+		return microEvent;
+	}
+
+	public void setMicroEvent(MicroEvent microEvent) {
+		this.microEvent = microEvent;
+	}
+
+	
+	@ManyToOne
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+	
+	@ManyToOne
+	public Team getTeam() {
+		return team;
+	}
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
 }

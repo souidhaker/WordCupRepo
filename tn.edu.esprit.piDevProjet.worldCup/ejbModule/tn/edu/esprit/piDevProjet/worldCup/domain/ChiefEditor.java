@@ -2,6 +2,8 @@ package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -17,7 +19,7 @@ public class ChiefEditor implements Serializable {
 	private String login;
 	private String password;
 	private static final long serialVersionUID = 1L;
-
+private List<Actuality> actualities;
 	public ChiefEditor() {
 		super();
 	}   
@@ -43,5 +45,12 @@ public class ChiefEditor implements Serializable {
 		this.password = password;
 	}
 	
-   
+   @OneToMany
+   public List<Actuality> getActualities() {
+		return actualities;
+	}
+	public void setActualities(List<Actuality> actualities) {
+		this.actualities = actualities;
+	}
+	
 }

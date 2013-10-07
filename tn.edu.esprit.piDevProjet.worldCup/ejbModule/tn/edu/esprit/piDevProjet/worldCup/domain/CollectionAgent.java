@@ -1,11 +1,13 @@
 package tn.edu.esprit.piDevProjet.worldCup.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  * Entity implementation class for Entity: CollectionAgent
@@ -17,7 +19,7 @@ public class CollectionAgent implements Serializable {
 	private String login;
 	private String password;
 	private static final long serialVersionUID = 1L;
-
+private List<MicroEvent> microEvents;
 	public CollectionAgent() {
 		super();
 	}
@@ -40,4 +42,13 @@ public class CollectionAgent implements Serializable {
 		this.password = password;
 	}
 
+	
+@OneToMany
+public List<MicroEvent> getMicroEvents() {
+	return microEvents;
+}
+
+public void setMicroEvents(List<MicroEvent> microEvents) {
+	this.microEvents = microEvents;
+}
 }

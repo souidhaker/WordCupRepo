@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Entity implementation class for Entity: Ticket
@@ -17,7 +18,7 @@ public class Ticket implements Serializable {
 	private int ticketId;
 	private char ticketZone;
 	private static final long serialVersionUID = 1L;
-
+private Match match;
 	public Ticket() {
 		super();
 	}
@@ -45,4 +46,13 @@ public class Ticket implements Serializable {
 		this.ticketZone = ticketZone;
 	}
 
+	
+@ManyToOne
+public Match getMatch() {
+	return match;
+}
+
+public void setMatch(Match match) {
+	this.match = match;
+}
 }

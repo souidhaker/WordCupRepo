@@ -20,7 +20,7 @@ private String actualityTitle;
 private Date actualityDate;
 
 private List<SubscribedClient> subscribedClient ;
-	
+	private ChiefEditor chiefEditor;
 	public Actuality(int actualityId, String actualityTitle, Date actualityDate) {
 	super();
 	this.actualityId = actualityId;
@@ -67,5 +67,13 @@ private List<SubscribedClient> subscribedClient ;
 	}
 	public void setSubscribedClient(List<SubscribedClient> subscribedClient) {
 		this.subscribedClient = subscribedClient;
+	}
+	
+	@ManyToOne 
+	public ChiefEditor getChiefEditor() {
+		return chiefEditor;
+	}
+	public void setChiefEditor(ChiefEditor chiefEditor) {
+		this.chiefEditor = chiefEditor;
 	}
 }
